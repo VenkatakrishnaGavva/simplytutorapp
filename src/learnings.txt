@@ -1,0 +1,7 @@
+29-08-2023
+How to get bootstrap in angular application?
+Step 1 : Install bootstrap using npm
+npm install @ng-bootstrap/ng-bootstrap
+add NgbModule in app.module.ts
+add bootstrap css in angular.json styles 
+"node_modules/bootstrap/dist/css/bootstrap.min.css"

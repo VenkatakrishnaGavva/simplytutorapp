@@ -8,15 +8,7 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
-const firebaseConfig = {
-  apiKey: "AIzaSyBTEHxVvQ3LmoFSCpsmAKRV4AgvOhYfwBE",
-  authDomain: "simplytutor-2f4a0.firebaseapp.com",
-  projectId: "simplytutor-2f4a0",
-  storageBucket: "simplytutor-2f4a0.appspot.com",
-  messagingSenderId: "686061012621",
-  appId: "1:686061012621:web:eb268fe82ea6f021c0c4c4",
-  measurementId: "G-VS5Z3WD3TQ"
-};
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap'; 
 @NgModule({
   declarations: [
     AppComponent
@@ -27,7 +19,8 @@ const firebaseConfig = {
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

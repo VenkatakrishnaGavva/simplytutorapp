@@ -9,6 +9,7 @@ import { FirebaseService } from './firebase.service';
 })
 export class AppComponent {
   title = 'simplytutorapp';
+  loginstatus:string="";
 
   user: UserModel = new UserModel();
   constructor(private firebaseService: FirebaseService) {
@@ -16,7 +17,7 @@ export class AppComponent {
 
   }
 
-  login(): void {
+  submit(): void {
     this.firebaseService.GetDocument("users_1").subscribe(usersRes => {
       // let isLoginSuccess = false;
       // for (var i = 0; i < usersRes.length; i++) {
@@ -40,10 +41,12 @@ export class AppComponent {
       const filterUsers = usersRes.filter(user => this.user.userName == user['username'] &&  this.user.password == user['password']);
       if(filterUsers.length == 1) // matched 
       {
-        alert("login Success");
+        this.loginstatus="login success";
+        //alert("login success");
       }
       else{
-        alert("login failure");
+        this.loginstatus="login-failure";
+        //alert("login failure");
       }
     });
   }

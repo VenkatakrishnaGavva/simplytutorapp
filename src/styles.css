@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url('assets/images/bgnew.png');
+    background-size: cover; /* This scales the image to cover the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
